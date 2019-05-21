@@ -1,0 +1,1371 @@
+* {
+    box-sizing: border-box
+}
+
+@font-face {
+    font-family: 'circularblack';
+    src: url('fonts/circularstd-black.otf') format('otf'), url('fonts/circularstd-black.otf') format('truetype')
+}
+
+@font-face {
+    font-family: 'circularbook';
+    src: url('fonts/circularstd-book.otf') format('otf'), url('fonts/circularstd-book.otf') format('truetype')
+}
+
+@font-face {
+    font-family: 'circularmedium';
+    src: url('fonts/circularstd-medium.otf') format('otf'), url('fonts/circularstd-medium.otf') format('truetype')
+}
+
+@font-face {
+    font-family: 'circularmediumitalic';
+    src: url('fonts/circularstd-mediumitalic.otf') format('otf'), url('fonts/circularstd-mediumitalic.otf') format('truetype')
+}
+
+body {
+    font-family: 'circularblack';
+    font-size: 100px;
+    background: white;
+    color: #464646;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100%;
+    align-items: center;
+    height: 100%
+}
+
+#home {
+    overflow: hidden
+}
+
+a {
+    color: #3c3c3c
+}
+
+#logo a {
+    font-family: "circularblack", arial, sans-serif;
+    font-size: 1rem;
+    color: #464646;
+    text-decoration: none;
+    margin-left: 2rem;
+    letter-spacing: -0.01rem;
+    transition: .3s
+}
+
+#logo a:hover {
+    opacity: .7
+}
+
+.menu-icon {
+    position: fixed;
+    z-index: 2;
+    right: 45px;
+    top: 40px;
+    padding: 1em;
+    margin: -1em;
+    cursor: pointer
+}
+
+span {
+    display: inline-block;
+    height: 4px;
+    width: 20px;
+    background-color: #464646;
+    transition: .3s;
+    line-height: 0rem
+}
+
+span::before {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 20px;
+    background-color: #464646;
+    transition: .3s
+}
+
+span::after {
+    content: "";
+    display: inline-block;
+    background-color: #464646;
+    line-height: 0rem
+}
+
+span:hover,
+span:hover::after,
+span:hover::before {
+    background-color: #464646;
+    transition: .7s;
+    line-height: 0rem
+}
+
+.active .menu-icon span {
+    position: fixed;
+    background-color: #464646;
+    top: 80px;
+    right: 45px;
+    transition: .7s;
+    transform: rotate(-45deg)
+}
+
+.active span:after {
+    display: none
+}
+
+.active span::before {
+    position: fixed;
+    background-color: #464646;
+    transition: .7s;
+    transform: rotate(-90deg)
+}
+
+.active .menu-icon span:hover,
+.active span:hover::before {
+    background-color: #464646
+}
+
+#menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 1700px;
+    z-index: 1;
+    background: white;
+    opacity: 1;
+    box-shadow: -13px 0 150px 10px rgba(0, 0, 0, 0.12);
+    color: white;
+    font-size: 3rem;
+    padding-top: 100px;
+    transition: .7s
+}
+
+#menu.active {
+    left: 0;
+    transition: .7s
+}
+
+.menu-wrapper {
+    text-align: left;
+    color: #464646;
+    margin-right: 2rem;
+    margin-top: 3rem;
+    line-height: 3rem
+}
+
+.menu-wrapper a {
+    text-decoration: none;
+    text-align: right;
+    margin: 1rem;
+    padding: 1px;
+    font-size: 1em;
+    color: #464646;
+    display: block;
+    transition: .3s
+}
+
+.menu-wrapper a:hover {
+    opacity: .7
+}
+
+.menu-wrapper #home {
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 2rem;
+    transition: .3s
+}
+
+.menu-wrapper #home:hover {
+    background-size: 100% 100%;
+    opacity: .7
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+#menu-list {
+    font-family: "circularblack", arial, sans-serif;
+    margin-top: 2rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 4.4rem;
+    line-height: 5.3rem;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg)
+}
+
+#menu-list a {
+    color: white;
+    display: block;
+    background: -webkit-linear-gradient(left, #f65858, #ffa75c);
+    background: -moz-linear-gradient(left, #f65858, #ffa75c);
+    background-size: 100% 100%;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    opacity: 1;
+    transition: .7s
+}
+
+#menu-list a:hover {
+    background-position: 0 0;
+    opacity: .5
+}
+
+#canvas {
+    opacity: .08;
+    position: absolute;
+    z-index: -1
+}
+
+.top-header .title-top-about {
+    background: linear-gradient(to right, #f65858 0, #ffa75c 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow:
+}
+
+.about-wrapper {
+    margin-top: 46rem;
+    margin-right: 2rem;
+    margin-left: 2rem
+}
+
+.about-wrapper .portraits img {
+    margin: 0;
+    width: 100%;
+    border-radius: 2px
+}
+
+.about-wrapper .portraits h6 {
+    font-family: 'circularbook', arial, sans-serif;
+    font-size: .6rem;
+    margin: -1rem 0
+}
+
+.intro {
+    margin-top: 3rem
+}
+
+.intro p {
+    font-family: 'circularbook', arial, sans-serif;
+    font-size: 1rem
+}
+
+.music-wrapper {
+    text-align: center;
+    margin: 5rem 2rem
+}
+
+.music-wrapper h1 {
+    font-size: 2rem;
+    color: #ff2d55;
+    letter-spacing: -0.06rem
+}
+
+.quote {
+    margin: 4rem 1rem
+}
+
+.quote p {
+    font-family: 'circularmediumitalic', arial, sans-serif;
+    font-size: 1rem;
+    text-align: center
+}
+
+.top-header .title-top-portfolio {
+    font-size: 4.8rem;
+    background: linear-gradient(to right, #f65858 0, #ffa75c 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.portfolio-wrapper {
+    text-align: center;
+    margin-top: 22rem
+}
+
+.portfolio-wrapper a {
+    display: block;
+    font-size: 1.3rem;
+    padding: 1rem;
+    text-decoration: none;
+    transition: .3s
+}
+
+.portfolio-wrapper a:hover {
+    opacity: .7
+}
+
+.header-image {
+    text-align: center;
+    align-items: center
+}
+
+.header-image h1 {
+    font-size: 4rem;
+    text-align: center
+}
+
+.header-image a {
+    text-decoration: none
+}
+
+.header-image p {
+    font-family: "circularmedium";
+    font-size: 1.4rem
+}
+
+.header-image p a {
+    transition: .3s;
+    font-style: italic
+}
+
+.header-image p a:hover {
+    opacity: .7
+}
+
+.pieces-wrapper {
+    margin: 0 2rem
+}
+
+.pieces-wrapper a {
+    text-decoration: none
+}
+
+.indiv {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+    width: 200px;
+    transition: .3s
+}
+
+a .indiv .text-wrapper h1 {
+    transition: .4s
+}
+
+a .indiv .text-wrapper h1:hover {
+    opacity: .7
+}
+
+.indiv img {
+    width: 165%;
+    border-radius: 3.333px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2)
+}
+
+.indiv .text-wrapper {
+    width: 280px;
+    align-self: center
+}
+
+.indiv .text-wrapper h1 {
+    font-size: 1.6rem
+}
+
+.indiv .text-wrapper p {
+    font-size: .9rem;
+    font-family: 'circularmedium';
+    margin-top: -0.7rem;
+    line-height: 1.334rem
+}
+
+.gallery {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center
+}
+
+.gallery img {
+    width: 60%;
+    margin: 1rem;
+    padding: 1rem;
+    box-shadow: -13px 0 150px 10px rgba(0, 0, 0, 0.1);
+    transition: .39s
+}
+
+.gallery img:hover {
+    transform: scale(1.06)
+}
+
+.top-header {
+    font-family: "circularblack", arial, sans-serif;
+    font-size: 4.4rem;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+    z-index: -3
+}
+
+.top-header .title-top-connect {
+    background: linear-gradient(to right, #f65858 0, #ffa75c 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 23rem;
+    font-size: 1.3rem
+}
+
+.contact-info a {
+    color: #464646;
+    text-decoration: none;
+    transition: .3s
+}
+
+.contact-info a:hover {
+    opacity: .7
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.medium-svg img,
+.instagram-svg img,
+.linkedin-svg img,
+.dribbble-svg img,
+.twitter-svg img {
+    max-width: 20px;
+    max-height: 20px;
+    margin: 1rem;
+    transition: .3s
+}
+
+.medium-svg img:hover,
+.instagram-svg img:hover,
+.linkedin-svg img:hover,
+.dribbble-svg img:hover,
+.twitter-svg img:hover {
+    opacity: .7
+}
+
+.menu-icon {
+    top: 3rem
+}
+
+footer {
+    font-family: 'circularbook';
+    font-size: .7rem;
+    text-align: center;
+    color: #464646;
+    text-align: center
+}
+
+.other-header {
+    text-align: center;
+    margin-top: 9rem
+}
+
+.other-pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.other-pictures img {
+    margin: 2rem;
+    width: 300px
+}
+
+.other-header h1 {
+    font-size: 2rem
+}
+
+.other-header p {
+    font-family: 'circularbook';
+    font-size: 1rem
+}
+
+#appleplay .case-study {
+    text-align: center !important;
+    align-items: center
+}
+
+.case-study {
+    font-size: 1rem;
+    line-height: 1.33rem;
+    position: relative;
+    margin: 0 3%
+}
+
+.case-study-header {
+    font-family: "circularblack";
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 8rem
+}
+
+.case-study-header h4 {
+    font-family: "circularbook";
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-bottom: 2rem
+}
+
+.case-study-header img {
+    text-align: center;
+    width: 350px
+}
+
+.case-study .case-study-header h1 {
+    line-height: 4rem;
+    font-size: 3rem
+}
+
+.case-study h1 {
+    font-family: "circularblack";
+    line-height: 2rem
+}
+
+.case-study p {
+    font-family: "circularbook"
+}
+
+.case-study ul {
+    font-family: "circularbook"
+}
+
+.case-study .section img {
+    margin: 1.5rem;
+    width: 300px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.09);
+    border-radius: 3px
+}
+
+.five {
+    text-align: center
+}
+
+.case-study .section ul p {
+    margin-top: .2rem
+}
+
+.case-study .section .caption {
+    margin-top: -1rem;
+    text-align: center
+}
+
+.link-media {
+    text-align: center;
+    margin-bottom: 9rem
+}
+
+.link-media h1 {
+    font-size: 2rem
+}
+
+.link-media img {
+    margin: 1rem;
+    width: 45px;
+    transition: .5s
+}
+
+.link-media img:hover {
+    opacity: .7
+}
+
+@media screen and (min-width:375px) {
+    #menu-list {
+        font-size: 4.8rem;
+        line-height: 6rem
+    }
+
+    .menu-wrapper {
+        margin-top: 6rem;
+        line-height: 4rem
+    }
+
+    .menu-wrapper a {
+        font-size: 1.3em
+    }
+
+    .portfolio-wrapper a {
+        font-size: 1.6rem;
+        padding: 1.4rem
+    }
+
+    .top-header .scroll-indicator {
+        top: 460px
+    }
+
+    .medium-svg svg,
+    .instagram-svg svg,
+    .linkedin-svg svg,
+    .dribbble-svg svg {
+        max-width: 20px;
+        max-height: 20px;
+        margin: 1rem
+    }
+
+    .about-des-one {
+        margin: 33rem 1rem 1rem 1rem
+    }
+}
+
+@media(min-height:812px) and (min-width:375px) {
+    .menu-wrapper {
+        margin-left: 2rem
+    }
+
+    .menu-wrapper a {
+        text-align: right
+    }
+
+    .menu-wrapper #home {
+        font-size: 2.3rem;
+        text-align: right
+    }
+
+    #menu-list {
+        line-height: 6.5rem
+    }
+
+    .top-header .title-top-about {
+        font-size: 6rem
+    }
+
+    portfolio-wrapper {
+        margin-top: 15rem
+    }
+
+    .portfolio-wrapper a {
+        font-size: 1.7rem;
+        padding: 1.6rem
+    }
+
+    .medium-svg svg,
+    .instagram-svg svg,
+    .linkedin-svg svg,
+    .dribbble-svg svg {
+        max-width: 25px;
+        max-height: 25px;
+        margin: 1.4rem
+    }
+
+    .active .menu-icon span {
+        right: 45px;
+        top: 5rem
+    }
+
+    .music-wrapper {
+        margin: 2rem
+    }
+
+    .top-header .title-top-connect {
+        font-size: 5rem
+    }
+
+    .contact-info {
+        margin-top: 21rem
+    }
+
+    footer {
+        margin-bottom: 2.3rem
+    }
+}
+
+@media screen and (min-width:414px) {
+    .menu-wrapper {
+        font-size: 3.7rem;
+        margin-left: 1.3rem
+    }
+
+    #menu-list {
+        font-size: 6rem;
+        line-height: 6.5rem;
+        text-align: center
+    }
+
+    .top-header-connect .title-top {
+        font-size: 8rem
+    }
+
+    .top-header .scroll-indicator {
+        font-size: .9rem;
+        top: 510px
+    }
+
+    .menu-wrapper {
+        line-height: 5rem
+    }
+
+    .menu-wrapper a {
+        font-size: 1.2em
+    }
+
+    .active .menu-icon span {
+        right: 45px;
+        top: 5rem
+    }
+
+    .about-des-one {
+        margin: 38rem 1rem 1rem 1rem
+    }
+}
+
+@media screen and (min-width:768px) {
+    #menu-list {
+        font-size: 8rem;
+        line-height: 9rem
+    }
+
+    #menu {
+        width: 80%
+    }
+
+    #menu.active {
+        opacity: .98;
+        left: 52%;
+        width: 70%
+    }
+
+    .menu-icon {
+        right: 90px;
+        top: 40px
+    }
+
+    .active .menu-icon span {
+        right: 90px
+    }
+
+    #logo {
+        margin-left: 7rem
+    }
+
+    .menu-wrapper {
+        font-size: 4rem;
+        margin-top: 8rem
+    }
+
+    .top-header .title-top-about {
+        font-size: 9rem;
+        font-weight: lighter;
+        text-decoration: none;
+        opacity: 1;
+        z-index: -3;
+        margin-top: 1rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden
+    }
+
+    #menu {
+        width: 60%
+    }
+
+    #menu.active {
+        opacity: .967;
+        left: 32%;
+        width: 68%
+    }
+
+    .contact-info a {
+        font-size: 2rem
+    }
+
+    .resume a {
+        font-size: 1.4rem
+    }
+
+    .about-wrapper .portraits h6 {
+        width: 100%;
+        font-size: .92rem;
+        opacity: .5
+    }
+
+    .intro p {
+        font-size: 1.3rem
+    }
+
+    .music-wrapper {
+        margin-top: 5rem
+    }
+
+    .top-header .title-top-portfolio {
+        font-size: 9rem
+    }
+
+    .portfolio-wrapper {
+        margin-top: 17rem
+    }
+
+    .portfolio-wrapper a {
+        padding: 2.2rem;
+        display: inline
+    }
+
+    .case-study .section img {
+        width: 500px
+    }
+
+    .header-image h1 {
+        font-size: 5rem
+    }
+
+    .pieces-wrapper {
+        margin: 0 7rem
+    }
+
+    .indiv {
+        display: flex;
+        flex-direction: row;
+        width: 550px
+    }
+
+    .indiv img {
+        margin-right: 1.3rem;
+        width: 50%;
+        height: 50%
+    }
+
+    .indiv .text-wrapper h1 {
+        font-size: 2.58rem
+    }
+
+    .indiv .text-wrapper p {
+        font-size: 1.02rem
+    }
+
+    .top-header .title-top-connect {
+        font-size: 9rem
+    }
+
+    .contact-info {
+        margin-top: 22.5rem
+    }
+
+    .medium-svg svg,
+    .instagram-svg svg,
+    .linkedin-svg svg,
+    .dribbble-svg svg {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 3rem
+    }
+
+    footer {
+        margin: 0;
+        font-size: .7rem
+    }
+
+    .case-study {
+        margin: 0 10%
+    }
+
+    .case-study-header {
+        font-family: "circularblack";
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 8rem
+    }
+
+    .case-study .case-study-header h1 {
+        font-size: 4rem
+    }
+
+    .case-study-header img {
+        width: 650px;
+        text-align: center
+    }
+
+    .case-study .section img {
+        width: 600px
+    }
+}
+
+@media screen and (min-width:1024px) and (min-height:1366px) {
+    #logo {
+        margin-left: 7rem
+    }
+
+    .menu-icon {
+        right: 100px;
+        top: 40px
+    }
+
+    .active .menu-icon span {
+        right: 100px
+    }
+
+    #menu {
+        width: 80%
+    }
+
+    .menu-wrapper #home {
+        font-size: 3.3rem
+    }
+
+    .menu-wrapper {
+        font-size: 6rem;
+        margin-right: 5rem;
+        line-height: 9rem
+    }
+
+    #menu.active {
+        left: 30%;
+        width: 70%
+    }
+
+    #menu-list {
+        font-size: 11rem;
+        line-height: 15rem
+    }
+
+    .top-header .title-top-about {
+        font-weight: lighter;
+        text-decoration: none;
+        opacity: 1;
+        z-index: -3;
+        margin-top: 1rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden
+    }
+
+    .contact-info {
+        margin-top: 32rem
+    }
+
+    .about-wrapper {
+        margin-right: 4rem;
+        margin-left: 4rem
+    }
+
+    .about-wrapper .portraits h6 {
+        font-size: 1.1rem
+    }
+
+    .intro p {
+        font-size: 1.7rem
+    }
+
+    .music-wrapper {
+        margin: 5rem auto
+    }
+
+    .music-wrapper h1 {
+        font-size: 3rem
+    }
+
+    .portfolio-wrapper {
+        margin-top: 29rem
+    }
+
+    .portfolio-wrapper a {
+        font-size: 2.223rem;
+        padding: 2.2rem;
+        display: inline
+    }
+}
+
+@media screen and (min-width:1100px) {
+    #logo a {
+        margin-left: 5rem;
+        font-size: .3rem
+    }
+
+    .menu-icon {
+        position: fixed;
+        z-index: 2;
+        right: 90px;
+        top: 19px;
+        padding: 1em;
+        margin: -1em;
+        cursor: pointer
+    }
+
+    span {
+        display: inline-block;
+        height: 6px;
+        width: 34px;
+        transition: .5s;
+        line-height: 1px
+    }
+
+    span::before {
+        content: "";
+        display: inline-block;
+        height: 6px;
+        width: 34px;
+        background-color: #464646
+    }
+
+    #menu {
+        width: 70%
+    }
+
+    #menu.active {
+        left: 57%;
+        transition: .5s
+    }
+
+    .active .menu-icon span {
+        right: 100px;
+        top: 96px
+    }
+
+    .menu-icon {
+        right: 100px;
+        top: 60px
+    }
+
+    #menu a {
+        margin-right: 280px;
+        text-align: right;
+        font-size: 5rem
+    }
+
+    .menu-wrapper {
+        margin-left: 1rem;
+        margin-right: 5rem
+    }
+
+    .menu-wrapper a {
+        margin: 1rem;
+        transition: .5s
+    }
+
+    #menu #home {
+        font-size: 2.5rem;
+        text-align: right;
+        margin-bottom: 4rem
+    }
+
+    #logo a {
+        font-size: 17px;
+        letter-spacing: 1px;
+        text-decoration: none
+    }
+
+    #menu-list a {
+        font-size: 13rem;
+        line-height: 14rem;
+        color: white;
+        display: block;
+        background: -webkit-linear-gradient(left, #f65858, #ffa75c);
+        background: -moz-linear-gradient(left, #f65858, #ffa75c);
+        background-size: 100% 100%;
+        background-position: right 0;
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-transition: background .4s;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        -moz-transition: background .4s;
+        transition: .7s
+    }
+
+    #canvas {
+        position: absolute;
+        filter: url("#liquid");
+        opacity: 0;
+        top: 1rem;
+        z-index: -1
+    }
+
+    .top-header .title-top-about {
+        font-size: 17rem;
+        font-weight: lighter;
+        text-decoration: none;
+        opacity: 1;
+        z-index: -3;
+        margin-top: 25rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden
+    }
+
+    .top-header .title-top-portfolio {
+        font-size: 15rem
+    }
+
+    .portfolio-wrapper a {
+        display: inline
+    }
+
+    .portfolio-wrapper {
+        margin-top: 22rem
+    }
+
+    .portfolio-wrapper a {
+        font-size: 2.223rem;
+        padding: 2.5rem;
+        display: inline
+    }
+
+    .header-image h1 {
+        font-size: 7rem
+    }
+
+    .pieces-wrapper {
+        margin: 0 15rem
+    }
+
+    .indiv {
+        display: flex;
+        flex-direction: row;
+        width: 750px
+    }
+
+    .indiv img {
+        margin-right: 1.3rem
+    }
+
+    .text-wrapper h1 {
+        font-size: 32rem
+    }
+
+    .gallery img {
+        width: 30%;
+        margin: 1rem;
+        padding: 1rem;
+        box-shadow: -13px 0 150px 10px rgba(0, 0, 0, 0.1);
+        transition: .39s
+    }
+
+    .others img {
+        width: 400px
+    }
+
+    .other-header {
+        text-align: center;
+        margin-top: 9rem
+    }
+
+    .other-pictures img {
+        margin: 2rem
+    }
+
+    .other-header h1 {
+        font-size: 5rem
+    }
+
+    .other-header p {
+        font-size: 1.5rem;
+        margin-top: -2rem
+    }
+
+    .about-wrapper {
+        text-align: center;
+        margin-left: 6rem;
+        margin-right: 6rem
+    }
+
+    .intro {
+        width: 650px;
+        margin: 5rem auto
+    }
+
+    .about-wrapper .portraits img {
+        width: 80%
+    }
+
+    .case-study {
+        margin: 0 20%
+    }
+
+    .top-header .title-top-connect {
+        font-size: 15rem
+    }
+
+    .contact-info {
+        margin-top: 24rem
+    }
+
+    .contact-info a {
+        font-size: 2rem
+    }
+
+    .medium-svg svg,
+    .instagram-svg svg,
+    .linkedin-svg svg,
+    .dribbble-svg svg,
+    .twitter-svg svg {
+        max-width: 40px;
+        max-height: 40px;
+        margin: 4rem
+    }
+
+    footer {
+        font-size: .7rem
+    }
+
+    .resume a {
+        font-size: 1.4rem
+    }
+}
+
+@media screen and (min-width:1400px) {
+    #logo a {
+        font-size: .9rem;
+        letter-spacing: -0.01rem
+    }
+
+    #menu {
+        left: 2000px
+    }
+
+    .menu-wrapper {
+        padding-right: 7rem;
+        line-height: 6rem
+    }
+
+    #menu a {
+        text-align: right;
+        margin-right: 180px;
+        font-size: 5rem;
+        color: #464646
+    }
+
+    .menu-wrapper {
+        margin-right: 22rem
+    }
+
+    #menu #home {
+        font-size: 2.5rem;
+        text-align: right;
+        margin-bottom: 4rem
+    }
+
+    #menu-list {
+        text-decoration: none;
+        text-align: center;
+        font-size: 14rem;
+        line-height: 16rem;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(0deg)
+    }
+
+    #menu-list a {
+        font-size: 14rem;
+        line-height: 15rem
+    }
+
+    #menu.active {
+        opacity: .98;
+        left: 62%;
+        width: 80%
+    }
+
+    .contact-info {
+        font-size: 2rem
+    }
+
+    .contact-info a {
+        text-decoration: none;
+        color: #464646
+    }
+
+    .pieces-wrapper {
+        margin: 0 22rem
+    }
+
+    .indiv img {
+        align-self: center
+    }
+
+    .text-wrapper {
+        width: 400px
+    }
+
+    .case-study {
+        margin: 0 30%
+    }
+
+    .case-study .case-study-header h1 {
+        font-size: 7rem;
+        line-height: 7.2rem
+    }
+}
+
+@media screen and (min-width:1600px) {
+    .menu-wrapper {
+        margin-right: 30rem;
+        line-height: 6rem
+    }
+
+    .intro {
+        width: 650px;
+        margin: 5rem auto
+    }
+
+    .about-wrapper .portraits img {
+        width: 50%
+    }
+
+    .pieces-wrapper {
+        margin: 0 32rem
+    }
+
+    .indiv .text-wrapper {
+        width: 550px
+    }
+
+    .indiv img {
+        margin-right: 1.3rem
+    }
+
+    .indiv .text-wrapper h1 {
+        font-size: 2.58rem
+    }
+
+    .indiv .text-wrapper p {
+        font-size: 1.04rem
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .menu-wrapper {
+        margin-right: 38rem
+    }
+}
