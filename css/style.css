@@ -580,46 +580,53 @@ footer {
 }
 
 .link-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-bottom: 9rem
+    margin-top: -1.6rem;
+    margin-bottom: 3rem;
 }
 
-.link-media h1 {
-    font-size: 2rem
+
+.link-media-title {
+    text-align: center;
+    font-size: 1rem;
 }
 
 .link-media img {
-    margin: 1rem;
-    width: 45px;
-    transition: .5s
+    margin: 0 3rem;
+    width: 41px;
+    transition: .5s;
 }
 
 .link-media img:hover {
-    opacity: .7
+    opacity: .7;
 }
 
 @media screen and (min-width:375px) {
     #menu-list {
         font-size: 4.8rem;
-        line-height: 6rem
+        line-height: 6rem;
     }
 
     .menu-wrapper {
         margin-top: 6rem;
-        line-height: 4rem
+        line-height: 4rem;
     }
 
     .menu-wrapper a {
-        font-size: 1.3em
+        font-size: 1.3em;
     }
 
     .portfolio-wrapper a {
         font-size: 1.6rem;
-        padding: 1.4rem
+        padding: 1.4rem;
     }
 
     .top-header .scroll-indicator {
-        top: 460px
+        top: 460px;
     }
 
     .medium-svg svg,
@@ -628,43 +635,43 @@ footer {
     .dribbble-svg svg {
         max-width: 20px;
         max-height: 20px;
-        margin: 1rem
+        margin: 1rem;
     }
 
     .about-des-one {
-        margin: 33rem 1rem 1rem 1rem
+        margin: 33rem 1rem 1rem 1rem;
     }
 }
 
 @media(min-height:812px) and (min-width:375px) {
     .menu-wrapper {
-        margin-left: 2rem
+        margin-left: 2rem;
     }
 
     .menu-wrapper a {
-        text-align: right
+        text-align: right;
     }
 
     .menu-wrapper #home {
         font-size: 2.3rem;
-        text-align: right
+        text-align: right;
     }
 
     #menu-list {
-        line-height: 6.5rem
+        line-height: 6.5rem;
     }
 
     .top-header .title-top-about {
-        font-size: 6rem
+        font-size: 6rem;
     }
 
     portfolio-wrapper {
-        margin-top: 15rem
+        margin-top: 15rem;
     }
 
     .portfolio-wrapper a {
         font-size: 1.7rem;
-        padding: 1.6rem
+        padding: 1.6rem;
     }
 
     .medium-svg svg,
@@ -673,102 +680,102 @@ footer {
     .dribbble-svg svg {
         max-width: 25px;
         max-height: 25px;
-        margin: 1.4rem
+        margin: 1.4rem;
     }
 
     .active .menu-icon span {
         right: 45px;
-        top: 5rem
+        top: 5rem;
     }
 
     .music-wrapper {
-        margin: 2rem
+        margin: 2rem;
     }
 
     .top-header .title-top-connect {
-        font-size: 5rem
+        font-size: 5rem;
     }
 
     .contact-info {
-        margin-top: 21rem
+        margin-top: 21rem;
     }
 
     footer {
-        margin-bottom: 2.3rem
+        margin-bottom: 2.3rem;
     }
 }
 
 @media screen and (min-width:414px) {
     .menu-wrapper {
         font-size: 3.7rem;
-        margin-left: 1.3rem
+        margin-left: 1.3rem;
     }
 
     #menu-list {
         font-size: 6rem;
         line-height: 6.5rem;
-        text-align: center
+        text-align: center;
     }
 
     .top-header-connect .title-top {
-        font-size: 8rem
+        font-size: 8rem;
     }
 
     .top-header .scroll-indicator {
         font-size: .9rem;
-        top: 510px
+        top: 510px;
     }
 
     .menu-wrapper {
-        line-height: 5rem
+        line-height: 5rem;
     }
 
     .menu-wrapper a {
-        font-size: 1.2em
+        font-size: 1.2em;
     }
 
     .active .menu-icon span {
         right: 45px;
-        top: 5rem
+        top: 5rem;
     }
 
     .about-des-one {
-        margin: 38rem 1rem 1rem 1rem
+        margin: 38rem 1rem 1rem 1rem;
     }
 }
 
 @media screen and (min-width:768px) {
     #menu-list {
         font-size: 8rem;
-        line-height: 9rem
+        line-height: 9rem;
     }
 
     #menu {
-        width: 80%
+        width: 80%;
     }
 
     #menu.active {
         opacity: .98;
         left: 52%;
-        width: 70%
+        width: 70%;
     }
 
     .menu-icon {
         right: 90px;
-        top: 40px
+        top: 40px;
     }
 
     .active .menu-icon span {
-        right: 90px
+        right: 90px;
     }
 
     #logo {
-        margin-left: 7rem
+        margin-left: 7rem;
     }
 
     .menu-wrapper {
         font-size: 4rem;
-        margin-top: 8rem
+        margin-top: 8rem;
     }
 
     .top-header .title-top-about {
@@ -784,92 +791,92 @@ footer {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        overflow: hidden
+        overflow: hidden;
     }
 
     #menu {
-        width: 60%
+        width: 60%;
     }
 
     #menu.active {
         opacity: .967;
         left: 32%;
-        width: 68%
+        width: 68%;
     }
 
     .contact-info a {
-        font-size: 2rem
+        font-size: 2rem;
     }
 
     .resume a {
-        font-size: 1.4rem
+        font-size: 1.4rem;
     }
 
     .about-wrapper .portraits h6 {
         width: 100%;
         font-size: .92rem;
-        opacity: .5
+        opacity: .5;
     }
 
     .intro p {
-        font-size: 1.3rem
+        font-size: 1.3rem;
     }
 
     .music-wrapper {
-        margin-top: 5rem
+        margin-top: 5rem;
     }
 
     .top-header .title-top-portfolio {
-        font-size: 9rem
+        font-size: 9rem;
     }
 
     .portfolio-wrapper {
-        margin-top: 17rem
+        margin-top: 17rem;
     }
 
     .portfolio-wrapper a {
         padding: 2.2rem;
-        display: inline
+        display: inline;
     }
 
     .case-study .section img {
-        width: 500px
+        width: 500px;
     }
 
     .header-image h1 {
-        font-size: 5rem
+        font-size: 5rem;
     }
 
     .pieces-wrapper {
-        margin: 0 7rem
+        margin: 0 7rem;
     }
 
     .indiv {
         display: flex;
         flex-direction: row;
-        width: 550px
+        width: 550px;
     }
 
     .indiv img {
         margin-right: 1.3rem;
         width: 50%;
-        height: 50%
+        height: 50%;
     }
 
     .indiv .text-wrapper h1 {
-        font-size: 2.58rem
+        font-size: 2.58rem;
     }
 
     .indiv .text-wrapper p {
-        font-size: 1.02rem
+        font-size: 1.02rem;
     }
 
     .top-header .title-top-connect {
-        font-size: 9rem
+        font-size: 9rem;
     }
 
     .contact-info {
-        margin-top: 22.5rem
+        margin-top: 22.5rem;
     }
 
     .medium-svg svg,
@@ -878,75 +885,75 @@ footer {
     .dribbble-svg svg {
         max-width: 40px;
         max-height: 40px;
-        margin: 3rem
+        margin: 3rem;
     }
 
     footer {
         margin: 0;
-        font-size: .7rem
+        font-size: .7rem;
     }
 
     .case-study {
-        margin: 0 10%
+        margin: 0 10%;
     }
 
     .case-study-header {
         font-family: "circularblack";
         font-size: 1.5rem;
         text-align: center;
-        margin-top: 8rem
+        margin-top: 8rem;
     }
 
     .case-study .case-study-header h1 {
-        font-size: 4rem
+        font-size: 4rem;
     }
 
     .case-study-header img {
         width: 650px;
-        text-align: center
+        text-align: center;
     }
 
     .case-study .section img {
-        width: 600px
+        width: 600px;
     }
 }
 
 @media screen and (min-width:1024px) and (min-height:1366px) {
     #logo {
-        margin-left: 7rem
+        margin-left: 7rem;
     }
 
     .menu-icon {
         right: 100px;
-        top: 40px
+        top: 40px;
     }
 
     .active .menu-icon span {
-        right: 100px
+        right: 100px;
     }
 
     #menu {
-        width: 80%
+        width: 80%;
     }
 
     .menu-wrapper #home {
-        font-size: 3.3rem
+        font-size: 3.3rem;
     }
 
     .menu-wrapper {
         font-size: 6rem;
         margin-right: 5rem;
-        line-height: 9rem
+        line-height: 9rem;
     }
 
     #menu.active {
         left: 30%;
-        width: 70%
+        width: 70%;
     }
 
     #menu-list {
         font-size: 11rem;
-        line-height: 15rem
+        line-height: 15rem;
     }
 
     .top-header .title-top-about {
@@ -961,36 +968,36 @@ footer {
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        overflow: hidden
+        overflow: hidden;
     }
 
     .contact-info {
-        margin-top: 32rem
+        margin-top: 32rem;
     }
 
     .about-wrapper {
         margin-right: 4rem;
-        margin-left: 4rem
+        margin-left: 4rem;
     }
 
     .about-wrapper .portraits h6 {
-        font-size: 1.1rem
+        font-size: 1.1rem;
     }
 
     .intro p {
-        font-size: 1.7rem
+        font-size: 1.7rem;
     }
 
     .music-wrapper {
-        margin: 5rem auto
+        margin: 5rem auto;
     }
 
     .music-wrapper h1 {
-        font-size: 3rem
+        font-size: 3rem;
     }
 
     .portfolio-wrapper {
-        margin-top: 29rem
+        margin-top: 29rem;
     }
 
     .portfolio-wrapper a {
