@@ -594,10 +594,15 @@ footer {
     font-size: 1rem;
 }
 
-.link-media img {
+.link-media .appstore-svg {
     margin: 0 3rem;
-    width: 41px;
+    width: 100px;
     transition: .5s;
+}
+
+.link-media .github-svg {
+    margin: 0 3rem;
+    width: 51px;transition: .5s;
 }
 
 .link-media img:hover {
